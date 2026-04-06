@@ -1,26 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: Arial;
-    background: plum;
-    text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem 1rem;
 }
 
-input {
-    padding: 8px;
+.container {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
-button {
-    padding: 8px 12px;
-    background: black;
-    color: green;
-    border: none;
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.4rem;
+  color: #1a1a2e;
 }
 
-ul {
-    list-style: none;
+.add-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.6rem;
 }
 
-li {
-    background: yellow;
-    margin: 5px;
-    padding: 10px;
+.add-form input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.add-form input:focus {
+  border-color: #6366f1;
+}
+
+.add-form button {
+  padding: 10px 20px;
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-form button:hover {
+  background: #4f46e5;
+}
+
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: #f8f9ff;
+  border: 1px solid #e8eaf6;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.task-list li.done .task-text {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.task-text {
+  font-size: 14px;
+  color: #333;
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+}
+
+.actions form {
+  margin: 0;
+}
+
+.btn-toggle,
+.btn-delete {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.btn-toggle:hover { background: #e0f2e9; }
+.btn-delete:hover  { background: #fde8e8; }
+
+.empty {
+  text-align: center;
+  color: #aaa;
+  font-size: 14px;
+  margin-top: 1rem;
 }

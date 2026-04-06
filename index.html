@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h2>List You Schedule</h2>
+
+<form action="/add" method="post">
+    <input type="text" name="task" placeholder="Enter task" required>
+    <button>Add</button>
+</form>
+
+<ul>
+{% for task in tasks %}
+    <li>
+        {{ task }}
+        <a href="/delete/{{ loop.index0 }}">❌</a>
+    </li>
+{% endfor %}
+</ul>
+
+</body>
+</html>
